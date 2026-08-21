@@ -1,0 +1,2 @@
+package org.opengridseg.detect;
+public final class BarNode { private final int row,col; private final double x,y; private final boolean observed; private final int peakIndex; BarNode(int row,int col,double x,double y,boolean observed,int peakIndex){this.row=row;this.col=col;this.x=x;this.y=y;this.observed=observed;this.peakIndex=peakIndex;} public int row(){return row;}public int col(){return col;}public double x(){return x;}public double y(){return y;}public boolean observed(){return observed;}public int peakIndex(){return peakIndex;} }

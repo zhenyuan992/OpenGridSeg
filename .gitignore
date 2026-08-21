@@ -1,0 +1,21 @@
+# Maven build and release files
+target/
+dist/
+
+# OpenGridSeg outputs
+OpenGridSeg_output/
+*_bar_crops.ome.tif
+*_bars.csv
+*_run_config.json
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*~

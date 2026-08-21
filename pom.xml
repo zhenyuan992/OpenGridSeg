@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opengridseg</groupId>
+  <artifactId>opengridseg</artifactId>
+  <version>0.1.0</version>
+  <name>OpenGridSeg</name>
+  <description>Open-source Fiji plugin for segmenting bar grids and exporting horizontal multichannel time-series crops.</description>
+  <url>https://github.com/zhenyuan992/OpenGridSeg</url>
+  <licenses><license><name>MIT License</name><url>https://opensource.org/licenses/MIT</url><distribution>repo</distribution></license></licenses>
+  <developers>
+    <developer><name>Zhen Yuan Yeo</name><url>https://github.com/zhenyuan992</url></developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/zhenyuan992/OpenGridSeg.git</connection>
+    <developerConnection>scm:git:https://github.com/zhenyuan992/OpenGridSeg.git</developerConnection>
+    <url>https://github.com/zhenyuan992/OpenGridSeg</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>5.11.4</junit.version>
+  </properties>
+
+  <repositories>
+    <repository><id>scijava.public</id><url>https://maven.scijava.org/content/groups/public</url></repository>
+    <repository><id>ome</id><url>https://artifacts.openmicroscopy.org/artifactory/maven/</url></repository>
+    <repository><id>unidata.releases</id><url>https://artifacts.unidata.ucar.edu/repository/unidata-releases/</url><snapshots><enabled>false</enabled></snapshots></repository>
+  </repositories>
+
+  <dependencies>
+    <dependency><groupId>org.scijava</groupId><artifactId>scijava-common</artifactId><version>2.100.1</version><scope>provided</scope></dependency>
+    <dependency><groupId>net.imagej</groupId><artifactId>ij</artifactId><version>1.54p</version><scope>provided</scope></dependency>
+    <dependency><groupId>ome</groupId><artifactId>formats-bsd</artifactId><version>8.5.0</version><scope>provided</scope></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>${junit.version}</version><scope>test</scope></dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.14.0</version></plugin>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.2</version><configuration><useModulePath>false</useModulePath></configuration></plugin>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-jar-plugin</artifactId><version>3.4.2</version>
+        <configuration><archive><manifestEntries><Implementation-Title>OpenGridSeg</Implementation-Title><Implementation-Version>${project.version}</Implementation-Version></manifestEntries></archive></configuration>
+      </plugin>
+      <plugin><groupId>org.scijava</groupId><artifactId>scijava-maven-plugin</artifactId><version>3.0.1</version></plugin>
+    </plugins>
+  </build>
+</project>

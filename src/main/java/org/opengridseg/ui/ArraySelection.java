@@ -1,0 +1,3 @@
+package org.opengridseg.ui;
+import org.opengridseg.detect.MacroArray;
+public final class ArraySelection { private final int id;private final MacroArray source;private boolean enabled=true;private int rowStart,colStart;public ArraySelection(int id,MacroArray source){this.id=id;this.source=source;this.rowStart=source.rowStart();this.colStart=source.colStart();}public int id(){return id;}public MacroArray source(){return source;}public boolean enabled(){return enabled;}public void setEnabled(boolean v){enabled=v;}public int rowStart(){return rowStart;}public void setRowStart(int v){rowStart=v;}public int colStart(){return colStart;}public void setColStart(int v){colStart=v;}public boolean edited(){return rowStart!=source.rowStart()||colStart!=source.colStart();}}

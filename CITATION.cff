@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use OpenGridSeg, please cite it using the metadata below."
+title: "OpenGridSeg: open grid segmentation and multichannel bar-crop export for Fiji"
+authors:
+  - family-names: Yeo
+    given-names: Zhen Yuan
+    affiliation: "Department of Statistics and Data Science, National University of Singapore, Singapore"
+    orcid: "https://orcid.org/0000-0003-2766-6972"
+type: software
+license: MIT
+version: 0.1.0
+date-released: 2026-08-21
+repository-code: "https://github.com/zhenyuan992/OpenGridSeg"
