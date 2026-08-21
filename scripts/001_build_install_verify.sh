@@ -50,6 +50,9 @@ esac
 
 mkdir -p "$PROJECT_DIR/dist"
 install -m 0644 "$JAR" "$PROJECT_DIR/dist/OpenGridSeg.jar"
-sha256sum "$PROJECT_DIR/dist/OpenGridSeg.jar" > "$PROJECT_DIR/dist/OpenGridSeg.jar.sha256"
+(
+  cd "$PROJECT_DIR/dist"
+  sha256sum OpenGridSeg.jar > OpenGridSeg.jar.sha256
+)
 printf 'Installed: %s\n' "$INSTALLED"
 printf 'Package: %s\n' "$PROJECT_DIR/dist/OpenGridSeg.jar"
